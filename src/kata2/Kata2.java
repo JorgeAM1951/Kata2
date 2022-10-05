@@ -18,13 +18,13 @@ public class Kata2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Integer [] data = {1,4,1,4,5,6,8,8,4,5,6,2};
+        String [] data = {"Marcos Mundstock", "Daniel Rabinovich", "Marcos Mundstock", "Carlos Lopez-Puchio","Carlos Lopez-Puchio"};
         
         
         HistogramGenerator histogramGenerator = new HistogramGenerator(data);
-        Map<Integer,Integer> histogram = histogramGenerator.getHistogram();
+        Map<String,Integer> histogram = histogramGenerator.getHistogram();
         
-        for(Map.Entry<Integer,Integer> entry : histogram.entrySet()){
+        for(Map.Entry<String,Integer> entry : histogram.entrySet()){
             System.out.println(entry.getKey() + " ==> " + entry.getValue());
         }
         }
